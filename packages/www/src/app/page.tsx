@@ -1,10 +1,15 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
 import { NewsletterEnum } from "@t5mm/shared";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+	const { t } = useTranslation()
+
   return (
     <div className={styles.page}>
       <main>
@@ -19,14 +24,14 @@ export default function Home() {
         <br />
         <br />
         <h1>Become a better professional in 5 mins a day.</h1>
-		<br />
+        <br />
         {/* <h3>Get free daily</h3> */}
         <h3>Newsletters</h3>
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           {Object.values(NewsletterEnum).map((newsletter, index) => (
             <label key={index}>
               <input type="checkbox" value={newsletter} />
-              {newsletter}
+              {t(newsletter)}
             </label>
           ))}
         </div>
