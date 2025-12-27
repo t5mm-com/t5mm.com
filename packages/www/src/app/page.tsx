@@ -23,6 +23,8 @@ export default function Home() {
           Object.values(NewsletterEnum).includes(n as NewsletterEnum)
         )
     : [];
+  const [firstDefaultNewsletter] = defaultNewsletters;
+  const role = t(firstDefaultNewsletter).toLowerCase() || "professional";
 
   const {
     register,
@@ -67,7 +69,10 @@ export default function Home() {
         ) : (
           <>
             <h1>
-              Become a<br/><span className="underlined">better professional</span><br/>in 5 minutes a day.
+              Become a<br />
+              <span className="underlined">better {role}</span>
+              <br />
+              in 5 minutes a day.
             </h1>
             <br />
             <form onSubmit={handleSubmit(onSubmit)} style={{ width: "100%" }}>
