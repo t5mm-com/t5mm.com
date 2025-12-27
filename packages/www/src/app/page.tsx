@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { NewsletterEnum } from "@t5mm/shared";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
-	const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div className={styles.page}>
@@ -23,34 +23,40 @@ export default function Home() {
         </Link>
       </header>
       <main style={{ maxWidth: "30rem" }}>
-        <br />
-        <br />
         <h1>
-          Become a{" "}
-          <span className={styles.curvedUnderline}>better solopreneur</span> in
-          5 mins a day.
+          Become a <span className="underlined">better professional</span> in 5
+          minutes a day.
         </h1>
         <br />
         {/* <h3>Get free daily</h3> */}
-        <h3>Newsletters</h3>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <p>
+          <b>Newsletters:</b>
+        </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: ".5rem" }}>
           {Object.values(NewsletterEnum).map((newsletter, index) => (
-            <label key={index}>
+            <label key={index} style={{ display: "flex", alignItems: "center", gap: ".35rem" }}>
               <input type="checkbox" value={newsletter} />
               {t(newsletter)}
             </label>
           ))}
         </div>
         <br />
-        <div>
-          <input id="email" type="email" placeholder="you@company.com" />
+        <div style={{ display: "flex", gap: ".5rem" }}>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@company.com"
+            style={{ minWidth: "16rem" }}
+            autoFocus
+          />
           <button>Subscribe</button>
         </div>
-        <p>The best news, insights and actionable tips from the web!</p>
+        <p style={{ fontSize: ".9rem", marginTop: ".5rem" }}>
+          The best news, insights and actionable tips from the web!
+        </p>
       </main>
       <footer>
         <a href="#">Privacy policy</a>
-        <a href="#">Advertise</a>
       </footer>
     </div>
   );
