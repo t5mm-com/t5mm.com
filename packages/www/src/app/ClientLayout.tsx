@@ -14,20 +14,21 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
     <I18nextProvider i18n={i18n}>
       <div className="page">
         <header>
-          <Link href="/">
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a href="/">
             <Image
               src="/img/t5mm-logo-dark-mode.svg"
               alt="T5MM Logo"
               width={81}
               height={24}
             />
-          </Link>
+          </a>
         </header>
         <main className="main">
           {children}
         </main>
         <footer style={{ fontSize: '.9rem'}}>
-          <a href="/privacy-policy">Privacy policy</a>
+          <Link href="/privacy-policy">Privacy policy</Link>
         </footer>
       </div>
     </I18nextProvider>
