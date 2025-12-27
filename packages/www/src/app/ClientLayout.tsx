@@ -26,7 +26,7 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
         <main className="main">
           {children}
         </main>
-        <footer>
+        <footer style={{ fontSize: '.9rem'}}>
           <a href="/privacy-policy">Privacy policy</a>
         </footer>
       </div>
