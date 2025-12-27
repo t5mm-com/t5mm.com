@@ -14,7 +14,7 @@ export default function Home() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<FormData>({
     defaultValues: {
       newsletters: [],
@@ -22,11 +22,15 @@ export default function Home() {
     },
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     console.log("=== FORM SUBMITTED ===");
     console.log("Email:", data.email);
     console.log("Newsletters:", data.newsletters);
     console.log("Full data:", data);
+
+    // Wait 5 seconds
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
     alert(
       `Form submitted! Email: ${
         data.email
@@ -41,7 +45,6 @@ export default function Home() {
         minutes a day.
       </h1>
       <br />
-      {/* <h3>Get free daily</h3> */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <p>
           <b>Newsletters:</b>
@@ -88,7 +91,7 @@ export default function Home() {
             autoFocus
             {...register("email")}
           />
-          <button type="submit">Subscribe</button>
+          <button type="submit" data-loading={isSubmitting} disabled={isSubmitting}>Subscribe</button>
         </div>
       </form>
       <p style={{ fontSize: ".9rem", marginTop: ".5rem" }}>
