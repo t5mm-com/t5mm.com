@@ -3,7 +3,6 @@
 import { NewsletterEnum } from "@t5mm-com/shared";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useSearchParams } from "next/navigation";
 
 type FormData = {
   email: string;
@@ -12,7 +11,9 @@ type FormData = {
 
 export default function Home() {
   const { t } = useTranslation();
-  const searchParams = useSearchParams();
+  const searchParams = new URLSearchParams(
+    typeof window !== "undefined" ? window.location.search : ""
+  );
 
   const capitalizeFirst = (str: string) =>
     str.charAt(0).toUpperCase() + str.slice(1);
