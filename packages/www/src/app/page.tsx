@@ -12,7 +12,7 @@ type FormData = {
   newsletters: string[];
 };
 
-export default function Home() {
+function HomeContent() {
   const { track } = useTracking();
   const { t } = useTranslation();
   const searchParams = useSearchParams();
@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <Suspense fallback={<div style={{ maxWidth: "30rem" }}>Loading...</div>}>
+    <>
       <div style={{ maxWidth: "30rem" }}>
         {isSubmitSuccessful ? (
           <>
@@ -164,6 +164,14 @@ export default function Home() {
           </>
         )}
       </div>
+    </>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div style={{ maxWidth: "30rem" }}>Loading...</div>}>
+      <HomeContent />
     </Suspense>
   );
 }

@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
-export default function VerifySubscriberPage() {
+function VerifyContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   const searchParams = useSearchParams();
@@ -30,10 +30,16 @@ export default function VerifySubscriberPage() {
 
   return (
     <>
-      <Suspense fallback={<div style={{ maxWidth: "30rem" }}>Loading...</div>}>
-        <h1>Confirm subscription</h1>
-        {isLoading ? <p>Loading...</p> : <p>Done! You&apos;re good to go!</p>}
-      </Suspense>
+      <h1>Confirm subscription</h1>
+      {isLoading ? <p>Loading...</p> : <p>Done! You&apos;re good to go!</p>}
     </>
+  );
+}
+
+export default function VerifySubscriberPage() {
+  return (
+    <Suspense fallback={<><h1>Confirm subscription</h1><p>Loading...</p></>}>
+      <VerifyContent />
+    </Suspense>
   );
 }
