@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
-function VerifyContent() {
+function VerifySubscriberPageContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   const searchParams = useSearchParams();
@@ -39,7 +39,7 @@ function VerifyContent() {
 export default function VerifySubscriberPage() {
   return (
     <Suspense fallback={<><h1>Confirm subscription</h1><p>Loading...</p></>}>
-      <VerifyContent />
+      <VerifySubscriberPageContent />
     </Suspense>
   );
 }
