@@ -6,8 +6,8 @@ Problems to solve:
 
 - most signups do not confirm signup using email link
   - revamp form
-    - Add caption that user will get need to confirm using email link
-    - Add a checkbox: "☑ I understand I need to confirm my email to start receiving T5MM"
+    <!-- - Add caption that user will get need to confirm using email link -->
+    <!-- - Add a checkbox: "☑ I understand I need to confirm my email to start receiving T5MM" -->
   - revamp post form submit page
     - show an ordered list of what they need to do
     - make it visually obvious that they just got an email and need to confirm
@@ -16,11 +16,11 @@ Problems to solve:
     - identify email provider from email and show provider-specific CTA (open Outlook)
     - Add exit intent popup on post-form page if the user is not verified yet
   - Revamp confirmation email
-    - Move deliverability optimization steps after email confirmation and simplify confirmation email
+    <!-- - Move deliverability optimization steps after email confirmation and simplify confirmation email -->
     - Add preview text to confirmation email
-    - Make email name more human instead of "The Five Minute Mail"
-    - Add non-button confirmation link
-    - ? change subject to be more action-oriented
+    <!-- - Make email name more human instead of "The Five Minute Mail" -->
+    <!-- - Add non-button confirmation link -->
+    <!-- - ? change subject to be more action-oriented -->
   - confirm reminder (with unsubscribe/manage subscriptions button)
     - max 3 reminders (2h, 24h, 72h)
 

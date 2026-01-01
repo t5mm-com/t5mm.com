@@ -28,7 +28,7 @@ const InnerClientLayout: React.FC<{ children: React.ReactNode }> = ({
         <footer style={{ fontSize: ".9rem" }}>
           <div style={{ display: "flex", gap: ".75rem" }}>
             <Link href="/privacy-policy">Privacy policy</Link>
-            <Link href="/advertise">Advertiser</Link>
+            <Link href="/advertise">Advertise</Link>
           </div>
         </footer>
       </div>

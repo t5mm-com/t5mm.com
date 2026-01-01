@@ -32,7 +32,7 @@ export class SubscribersSubscriber implements EntitySubscriberInterface<Subscrib
 
     await this.emailService.send({
       to: [{ email: event.entity.email, name: '' }],
-      subject: 'Confirm your signup to thefiveminutemail.com',
+      subject: 'Confirm your T5MM subscription (5 seconds)',
       htmlBody,
     });
   }
