@@ -10,3 +10,15 @@
 ## Character counts
 - Main body: 430
 - Quick links body: 120
+
+## Potential headers
+- What’s Changing?
+- How People Are Winning
+- Tools, Systems & Leverage
+- What’s Working Right Now
+- Ideas Worth Stealing
+- Signals to Watch
+- Lessons from the Field
+- Thinking Long-Term
+- Numbers That Matter
+- Worth Knowing
