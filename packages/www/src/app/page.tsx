@@ -102,7 +102,10 @@ export default function HomePage() {
         {isSubmitSuccessful ? (
           <>
             <h1>You&apos;re almost there...</h1>
-            <p>We just sent an email to you to confirm your subscription.</p>
+            <p>
+              We've emailed you a link to confirm your
+              subscription.
+            </p>
             <br />
             <ol>
               <li>Open your email inbox</li>
