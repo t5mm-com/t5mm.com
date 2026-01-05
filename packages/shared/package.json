@@ -47,6 +47,10 @@
     "./types": {
       "import": "./dist/types/index.mjs",
       "require": "./dist/types/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
     }
   }
 }

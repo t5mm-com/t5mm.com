@@ -1,6 +1,6 @@
 "use client";
 
-import { NewsletterEnum } from "@t5mm-com/shared";
+import { capitalizeFirst, NewsletterEnum } from "@t5mm-com/shared";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { TrackingEventEnum, useTracking } from "@t5mm-com/tracking";
@@ -19,9 +19,6 @@ export default function HomePage() {
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search)
       : new URLSearchParams();
-
-  const capitalizeFirst = (str: string) =>
-    str.charAt(0).toUpperCase() + str.slice(1);
 
   const newslettersParam = searchParams.get("newsletters");
   const defaultNewsletters = newslettersParam
